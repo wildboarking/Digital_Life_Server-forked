@@ -1,0 +1,5 @@
+*.pyc
+SentimentEngine/models/paimon_sentiment.onnx
+ASR/resources/models/model.onnx
+TTS/models/paimon6k_390k.pth
+TTS/models/yunfeimix2_53k.pth

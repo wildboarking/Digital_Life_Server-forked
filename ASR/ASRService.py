@@ -1,7 +1,7 @@
 import logging
 import time
 
-from ASR.rapid_paraformer import RapidParaformer
+from rapid_paraformer import RapidParaformer
 
 
 class ASRService():
@@ -21,6 +21,6 @@ if __name__ == '__main__':
     service = ASRService(config_path)
 
     # print(wav_path)
-    wav_path = 'ASR/test_wavs/0478_00017.wav'
+    wav_path = 'ASR/test_wavs/hello.wav'
     result = service.infer(wav_path)
     print(result)

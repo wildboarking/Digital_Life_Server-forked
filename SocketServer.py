@@ -140,11 +140,11 @@ class Server():
     def send_voice(self, resp_text, senti_or = None):
         self.tts.read_save(resp_text, self.tmp_proc_file, self.tts.hps.data.sampling_rate)
         with open(self.tmp_proc_file, 'rb') as f:
-            senddata = f.read()
+            senddata = f.read() #语音
         if senti_or:
             senti = senti_or
         else:
-            senti = self.sentiment.infer(resp_text)
+            senti = self.sentiment.infer(resp_text) #情绪
         senddata += b'?!'
         senddata += b'%i' % senti
         self.conn.sendall(senddata)
